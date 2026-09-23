@@ -1,0 +1,87 @@
+ 
+<!-- light.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--<meta http-equiv="refresh" content="10">-->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- This is the title that appears in the tab of a browser when viewing the page -->
+<title>ND Carpenter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="On screen link buttons to utilise a touch screen more on a laptop.">
+  <meta name="keywords" content="Residential Construction Health and Safety compliance for a PCBU1">
+  <meta name="author" content="Daniel Boyd</div>">
+<!--<link rel="stylesheet" href="main.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/main.css" />
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<!-- Google tag (gtag.js) This is our tag for google analytics, we are going to import it as a snippet-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J8HB3C2GGF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J8HB3C2GGF');
+</script>
+</head>
+<body>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- Banner -->
+					<section class="banner invert style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+    <h1><a href="/index.html">Neurodivergent Carpenter</a></h1> 
+                            <p class="major">Health and Safety compliance</p> 	                    
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7rKzj8kKu-HjIe0XvaGNLDb-Ie7lmMPSOvt2AGkv7Ss9ARw/viewform?embedded=true" width="360" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>							
+							<p>
+							<a href="/" class="button big wide smooth-scroll-middle" onclick="goBack()">Back</a>
+                        </p>
+							
+							<p>
+	<ul class="icons">
+		<li><a href="https://app.slack.com/client/T09MQ7C7HSM/C09R41M9336" class="icon style2 fa-slack"><span class="label">Slack</span></a></li>
+		<li><a href="" class="icon style2 fa-github"><span class="label">Carpentry</span></a></li>
+		<li><a href="" class="icon style2 fa-google"><span class="label">Google</span></a></li>
+		<li><a href="" class="icon style2 fa-archive"><span class="label">Google</span></a></li>
+		<li><a href=" class="icon style2 fa-keyboard-o"><span class="label">Shortcuts</span></a></li>
+		<li><a href="" class="icon style2 fa-gears"><span class="label">Configure</span></a></li><BR><BR>
+	</ul>
+</p>
+						</div>
+					</section>
+			    </div>
+</body>
+</html>
