@@ -16,7 +16,36 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="main.css" />
 
-
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script>
+	
 <!-- Google tag (gtag.js) This is our tag for google analytics, we are going to import it as a snippet-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8HB3C2GGF"></script>
 <script>
@@ -58,9 +87,16 @@
 	</ul>
 </p>
 										<p><a href="article-admin.php">&copy; South Coast Carpentry Ltd 2026</a></p>
+
+<div w3-include-html="/include/footer.html"></div>
+
+							
 						</div>
 					</section>
-			    </div>
+
+			<script>
+includeHTML();
+</script></div>
 </body>
 </html>
 
