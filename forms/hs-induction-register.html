@@ -16,35 +16,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/main.css" />
 
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
+
 <!-- Google tag (gtag.js) This is our tag for google analytics, we are going to import it as a snippet-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8HB3C2GGF"></script>
 <script>
@@ -62,7 +34,7 @@ function includeHTML() {
 				<!-- Banner -->
 					<section class="banner invert style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-    <h1><a href="/index.html">Neurodivergent Carpenter</a></h1> 
+    <h1><a href="/pages/hs.html">Neurodivergent Carpenter</a></h1> 
                             <p class="major">Health and Safety compliance</p> 	                    
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7rKzj8kKu-HjIe0XvaGNLDb-Ie7lmMPSOvt2AGkv7Ss9ARw/viewform?embedded=true" width="360" height="720" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>							
